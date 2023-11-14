@@ -1,0 +1,38 @@
+.filters {
+    margin-top: 30px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    background-color: var(--background);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #747474;
+}
+
+.filters button {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #747474;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    text-shadow: 1px 1px 5px rgba(255,255,255, 0.2);
+}
+
+.filters button.active{
+    color: #9370DB;
+}
+
+@media (max-width: 500px) {
+    .filters {
+        padding: 20px 10px;
+        justify-content: space-evenly;
+    }
+}
