@@ -6,6 +6,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "compilerOptions": {
+      "types": ["@types/react", "@types/react-dom", "@types/react-icons"],
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,7 +23,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

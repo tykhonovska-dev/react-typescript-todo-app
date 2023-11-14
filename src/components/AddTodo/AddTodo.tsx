@@ -15,7 +15,8 @@ const AddTodo: React.FC<AddTodoProps> = ({ addTodoHandler }) => {
   }
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className="addTodo" onSubmit={handleFormSubmit}>
+      <span className="dumpCheckbox"/>
       <input type="text"
              placeholder="Create a new todo..."
              value={text}

@@ -1,0 +1,42 @@
+.addTodo {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    border-radius: 4px;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.addTodo > input {
+    width: 90%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.addTodo > input::placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.dumpCheckbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+    .addTodo {
+        column-gap: 10px;
+        padding: 20px 10px;
+    }
+}

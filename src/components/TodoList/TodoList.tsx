@@ -11,7 +11,7 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todoList, deleteTodoHandler, toggleCompleteTodoHandler }) => {
   return (
-    <div>
+    <div className="todoList">
       {todoList.map((todo) => {
         return (
           <TodoItem key={todo.id}
