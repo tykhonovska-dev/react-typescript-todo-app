@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.80c74fed.css",
-    "main.js": "/static/js/main.95e9459e.js",
-    "static/media/darkMode.jpg": "/static/media/darkMode.75f6a6c1c35332f029e8.jpg",
-    "static/media/lightMode.jpg": "/static/media/lightMode.dc22c3a7a2bdca3b5c40.jpg",
-    "index.html": "/index.html",
-    "main.80c74fed.css.map": "/static/css/main.80c74fed.css.map",
-    "main.95e9459e.js.map": "/static/js/main.95e9459e.js.map"
+    "main.css": "/react-typescript-todo-app/static/css/main.80c74fed.css",
+    "main.js": "/react-typescript-todo-app/static/js/main.46deb020.js",
+    "static/media/darkMode.jpg": "/react-typescript-todo-app/static/media/darkMode.75f6a6c1c35332f029e8.jpg",
+    "static/media/lightMode.jpg": "/react-typescript-todo-app/static/media/lightMode.dc22c3a7a2bdca3b5c40.jpg",
+    "index.html": "/react-typescript-todo-app/index.html",
+    "main.80c74fed.css.map": "/react-typescript-todo-app/static/css/main.80c74fed.css.map",
+    "main.46deb020.js.map": "/react-typescript-todo-app/static/js/main.46deb020.js.map"
   },
   "entrypoints": [
     "static/css/main.80c74fed.css",
-    "static/js/main.95e9459e.js"
+    "static/js/main.46deb020.js"
   ]
 }
