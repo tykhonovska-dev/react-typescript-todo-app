@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../../TodoContexts";
 import TodoItem from "../TodoItem/TodoItem";
 import { TodoItemType } from "../../Type";
 import "./TodoList.css";
 
 interface TodoListProps {
-  todoList: TodoItemType[],
-  deleteTodoHandler: (id: number) => void,
-  toggleCompleteTodoHandler: (id: number) => void
+  // todoList: TodoItemType[],
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todoList, deleteTodoHandler, toggleCompleteTodoHandler }) => {
+const TodoList: React.FC<TodoListProps> = () => {
+  const {todoList} = useContext(TodoContext);
+
   return (
     <div className="todoList">
       {todoList.map((todo) => {
         return (
           <TodoItem key={todo.id}
                     todo={todo}
-                    deleteTodoHandler={deleteTodoHandler}
-                    toggleCompleteTodoHandler={toggleCompleteTodoHandler}
           />
         );
       })}

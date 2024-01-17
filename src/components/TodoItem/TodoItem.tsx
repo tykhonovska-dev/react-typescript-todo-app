@@ -1,15 +1,16 @@
-import React from "react";
-import { BsTrash3, BsCheck } from "react-icons/bs";
+import React, { useContext } from "react";
+import { TodoContext } from "../../TodoContexts";
 import { TodoItemType } from "../../Type";
+import { BsTrash3, BsCheck } from "react-icons/bs";
 import "./TodoItem.css";
 
 interface TodoItemProps {
-  todo: TodoItemType,
-  deleteTodoHandler: (id: number) => void,
-  toggleCompleteTodoHandler: (id: number) => void
+  todo: TodoItemType
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, deleteTodoHandler, toggleCompleteTodoHandler }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
+  const {handleDeleteTodo, handleToggleCompleteTodo} = useContext(TodoContext);
+
   return (
     <div className="todoItem">
       <label className="todoItemCheckbox"
@@ -18,12 +19,14 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, deleteTodoHandler, toggleComp
         <input
           type="checkbox"
           checked={todo.complete}
-          onChange={() => toggleCompleteTodoHandler(todo.id)}
+          onChange={() => handleToggleCompleteTodo(todo.id)}
         />
         <BsCheck className="checkmark"/>
       </label>
-      <span className="todoItemText">{todo.text}</span>
-      <button className="todoItemDeleteBtn" onClick={() => deleteTodoHandler(todo.id)}><BsTrash3/></button>
+      <span className="todoItemText"
+            style={{ textDecoration: todo.complete ? 'line-through' : 'unset' }}
+      >{todo.text}</span>
+      <button className="todoItemDeleteBtn" onClick={() => handleDeleteTodo(todo.id)}><BsTrash3/></button>
     </div>
   );
 }

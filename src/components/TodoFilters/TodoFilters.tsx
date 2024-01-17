@@ -1,31 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext } from "../../TodoContexts";
 import "./TodoFilters.css";
 
 interface TodoFiltersProps {
-  todoFilter: string,
-  showAllTodosHandler: () => void,
-  showActiveTodosHandler: () => void,
-  showCompleteTodosHandler: () => void
 }
 
-const TodoFilters: React.FC<TodoFiltersProps> = ({
-                                                   todoFilter,
-                                                   showAllTodosHandler,
-                                                   showActiveTodosHandler,
-                                                   showCompleteTodosHandler
-                                                 }) => {
+const TodoFilters: React.FC<TodoFiltersProps> = () => {
+  const {todoFilter, handleShowAllTodos, handleShowActiveTodos, handleShowCompleteTodos} = useContext(TodoContext);
+
   return (
     <div className="filters">
       <button className={todoFilter === 'ALL' ? "active" : ""}
-              onClick={showAllTodosHandler}>
+              onClick={handleShowAllTodos}>
         All
       </button>
       <button className={todoFilter === 'ACTIVE' ? "active" : ""}
-              onClick={showActiveTodosHandler}>
+              onClick={handleShowActiveTodos}>
         Active
       </button>
       <button className={todoFilter === 'COMPLETE' ? "active" : ""}
-              onClick={showCompleteTodosHandler}>
+              onClick={handleShowCompleteTodos}>
         Complete
       </button>
     </div>

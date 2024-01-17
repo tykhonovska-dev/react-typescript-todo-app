@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { TodoContext } from "../../TodoContexts";
 import "./AddTodo.css";
 
 interface AddTodoProps {
-  addTodoHandler: (text: string) => void;
 }
 
-const AddTodo: React.FC<AddTodoProps> = ({ addTodoHandler }) => {
+const AddTodo: React.FC<AddTodoProps> = () => {
+  const {handleAddTodo} = useContext(TodoContext);
+
   const [text, setText] = useState('');
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    addTodoHandler(text);
+    handleAddTodo(text);
     setText('');
   }
 
